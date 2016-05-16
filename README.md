@@ -4,6 +4,6 @@ application is the interface that allows users to request song details from
 a web server created in Swift.
 
 # Features
-[x] Add icon
-[] Add launch image
-[] Send GET request to web server
+- [x] Add icons (from logomakr.com)
+- [x] Add launch image (from logomakr.com)
+- [] Send GET request to web server
