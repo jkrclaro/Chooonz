@@ -6,4 +6,6 @@ a web server created in Swift.
 # Features
 - [x] Add icons (from logomakr.com)
 - [x] Add launch image (from logomakr.com)
-- [] Send GET request to web server
+- [ ] Send GET request
+- [ ] Display items in a table view
+- [ ] Play YouTube video
