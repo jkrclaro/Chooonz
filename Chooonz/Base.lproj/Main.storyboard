@@ -1,26 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TXT-a8-bKp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Chooonz-->
+        <scene sceneID="20o-lP-pci">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chooonz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="qSy-Mc-QZY" customClass="ChooonzTableViewController" customModule="Chooonz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="deh-Dc-hDt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="300" id="IuT-Bf-2IR" customClass="SongCell" customModule="Chooonz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IuT-Bf-2IR" id="BSN-W9-N7s">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Such Dumb Luck" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-NC-IOr">
+                                            <rect key="frame" x="8" y="241" width="584" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="WZ3-QD-gJK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-Hr-p3Y">
+                                            <rect key="frame" x="8" y="270" width="584" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="K4r-fu-Y9K"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_pale" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-Fg-6SL">
+                                            <rect key="frame" x="8" y="8" width="584" height="225"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="CZg-NC-IOr" secondAttribute="trailing" id="0kq-o4-fW1"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="BSN-W9-N7s" secondAttribute="trailingMargin" id="5DW-aK-J2C"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="BSN-W9-N7s" secondAttribute="leadingMargin" id="CJo-jp-Vrz"/>
+                                        <constraint firstItem="lNc-Hr-p3Y" firstAttribute="top" secondItem="CZg-NC-IOr" secondAttribute="bottom" constant="8" symbolic="YES" id="E5X-WY-qws"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="top" secondItem="BSN-W9-N7s" secondAttribute="topMargin" id="G0U-ua-NDt"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="CZg-NC-IOr" secondAttribute="leading" id="T9o-Ys-gqt"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="top" secondItem="7P2-Fg-6SL" secondAttribute="bottom" constant="8" symbolic="YES" id="ceJ-LY-hVd"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="trailing" secondItem="lNc-Hr-p3Y" secondAttribute="trailing" id="haT-iF-kYq"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="leading" secondItem="lNc-Hr-p3Y" secondAttribute="leading" id="ygC-2L-LeO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lNc-Hr-p3Y" secondAttribute="bottom" constant="0.5" id="zCc-HY-CWF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songArtist" destination="lNc-Hr-p3Y" id="if6-a8-yML"/>
+                                    <outlet property="songImage" destination="7P2-Fg-6SL" id="KMU-ag-WlZ"/>
+                                    <outlet property="songTitle" destination="CZg-NC-IOr" id="4Va-NZ-k97"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qSy-Mc-QZY" id="loe-fy-m51"/>
+                            <outlet property="delegate" destination="qSy-Mc-QZY" id="nDh-6S-Dp1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chooonz" id="bqb-Oy-Sx1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AR6-AT-dJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1319" y="447"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VoF-PS-FeM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXT-a8-bKp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="303-ot-dnt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32245196471055171" green="1" blue="0.56606261270778635" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qSy-Mc-QZY" kind="relationship" relationship="rootViewController" id="QHP-vF-qZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awk-Px-lfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="447"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="the_pale" width="960" height="960"/>
+    </resources>
 </document>
