@@ -15,3 +15,43 @@ a web server created in Swift.
 - [ ] Use Roboto font
 - [ ] Better string filter by taking in to account the position of letters
 - [ ] Display user's recent searches
+
+# Cocoa Pods
+Ensure you have cocoa pods installed. Refer to this guide https://www.youtube.com/watch?v=oNKVVBN2JN0.
+
+Using a text editor, the developer can edit the <b>Podfile</b> file in
+this repository.
+
+To add a new pod, add the pod name and version like below. To get the pod
+name and version, check the pod's GitHub repository.
+```
+target 'Chooonz' do
+end
+
+will now become
+
+target 'Chooonz' do
+pod 'Alamofire', '~> 3.3'
+end
+```
+
+To update the version of pod, replace the value after the <b>~></b>
+with the latest version.
+```
+target 'Chooonz' do
+pod 'Alamofire', '~> 3.3'
+end
+
+will now become
+
+target 'Chooonz' do
+pod 'Alamofire', '~> 3.4'
+end
+```
+
+To implement our new pods, run the following commands.
+```
+// Go to the directory of this repository using your terminal, e.g.
+$ cd Users/johnclaro/<path_to_Chooonz>
+$ pod install
+```

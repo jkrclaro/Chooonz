@@ -1,0 +1,6 @@
+framework module Pods_ChooonzTests {
+  umbrella header "Pods-ChooonzTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

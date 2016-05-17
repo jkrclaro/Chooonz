@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BABFA6C9B6871E0A3CD7C0 /* Pods_ChooonzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286314B0A7400645F61D707E /* Pods_ChooonzTests.framework */; };
+		AF9E320CBEB94624FD837DA0 /* Pods_Chooonz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9F9F9B12A9E0B9D56B44A7 /* Pods_Chooonz.framework */; };
 		E287AD0D1CEA607100D39D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD0C1CEA607100D39D24 /* AppDelegate.swift */; };
-		E287AD0F1CEA607100D39D24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD0E1CEA607100D39D24 /* ViewController.swift */; };
 		E287AD121CEA607100D39D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287AD101CEA607100D39D24 /* Main.storyboard */; };
 		E287AD151CEA607100D39D24 /* Chooonz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E287AD131CEA607100D39D24 /* Chooonz.xcdatamodeld */; };
 		E287AD171CEA607100D39D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E287AD161CEA607100D39D24 /* Assets.xcassets */; };
 		E287AD1A1CEA607100D39D24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287AD181CEA607100D39D24 /* LaunchScreen.storyboard */; };
 		E287AD251CEA607100D39D24 /* ChooonzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD241CEA607100D39D24 /* ChooonzTests.swift */; };
 		E287AD301CEA607100D39D24 /* ChooonzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD2F1CEA607100D39D24 /* ChooonzUITests.swift */; };
+		E287AD3E1CEB238300D39D24 /* ChooonzTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */; };
+		E287AD401CEB2C5700D39D24 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3F1CEB2C5700D39D24 /* SongCell.swift */; };
+		F9A21083EB5AAC6E7B35B17D /* Pods_ChooonzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DDFDBD9C837DDEE8683A1D1 /* Pods-ChooonzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChooonzTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChooonzTests/Pods-ChooonzTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E9F9F9B12A9E0B9D56B44A7 /* Pods_Chooonz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chooonz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		286314B0A7400645F61D707E /* Pods_ChooonzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChooonzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3C7B76B40BD422BB43034F /* Pods-Chooonz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chooonz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chooonz/Pods-Chooonz.release.xcconfig"; sourceTree = "<group>"; };
+		6A21D5014215012D57B6D28A /* Pods-ChooonzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChooonzUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChooonzUITests/Pods-ChooonzUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		755CB317D253214C54EB6DB0 /* Pods-ChooonzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChooonzTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChooonzTests/Pods-ChooonzTests.release.xcconfig"; sourceTree = "<group>"; };
+		870F73ABCF42CFEE786C6521 /* Pods-ChooonzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChooonzUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChooonzUITests/Pods-ChooonzUITests.release.xcconfig"; sourceTree = "<group>"; };
+		90BB1289E02B1862C296EDC7 /* Pods-Chooonz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chooonz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chooonz/Pods-Chooonz.debug.xcconfig"; sourceTree = "<group>"; };
+		AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChooonzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287AD091CEA607100D39D24 /* Chooonz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chooonz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287AD0C1CEA607100D39D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E287AD0E1CEA607100D39D24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E287AD111CEA607100D39D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E287AD141CEA607100D39D24 /* Chooonz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chooonz.xcdatamodel; sourceTree = "<group>"; };
 		E287AD161CEA607100D39D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +61,8 @@
 		E287AD2B1CEA607100D39D24 /* ChooonzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChooonzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287AD2F1CEA607100D39D24 /* ChooonzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooonzUITests.swift; sourceTree = "<group>"; };
 		E287AD311CEA607100D39D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooonzTableViewController.swift; sourceTree = "<group>"; };
+		E287AD3F1CEB2C5700D39D24 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9E320CBEB94624FD837DA0 /* Pods_Chooonz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BABFA6C9B6871E0A3CD7C0 /* Pods_ChooonzTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A21083EB5AAC6E7B35B17D /* Pods_ChooonzUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12CBD577DE886E211AB0F444 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90BB1289E02B1862C296EDC7 /* Pods-Chooonz.debug.xcconfig */,
+				3B3C7B76B40BD422BB43034F /* Pods-Chooonz.release.xcconfig */,
+				1DDFDBD9C837DDEE8683A1D1 /* Pods-ChooonzTests.debug.xcconfig */,
+				755CB317D253214C54EB6DB0 /* Pods-ChooonzTests.release.xcconfig */,
+				6A21D5014215012D57B6D28A /* Pods-ChooonzUITests.debug.xcconfig */,
+				870F73ABCF42CFEE786C6521 /* Pods-ChooonzUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F11748B835688DB484F426F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E9F9F9B12A9E0B9D56B44A7 /* Pods_Chooonz.framework */,
+				286314B0A7400645F61D707E /* Pods_ChooonzTests.framework */,
+				AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E287AD001CEA607100D39D24 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				E287AD231CEA607100D39D24 /* ChooonzTests */,
 				E287AD2E1CEA607100D39D24 /* ChooonzUITests */,
 				E287AD0A1CEA607100D39D24 /* Products */,
+				12CBD577DE886E211AB0F444 /* Pods */,
+				9F11748B835688DB484F426F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				E287AD0C1CEA607100D39D24 /* AppDelegate.swift */,
-				E287AD0E1CEA607100D39D24 /* ViewController.swift */,
 				E287AD101CEA607100D39D24 /* Main.storyboard */,
+				E287AD3F1CEB2C5700D39D24 /* SongCell.swift */,
+				E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */,
 				E287AD161CEA607100D39D24 /* Assets.xcassets */,
 				E287AD181CEA607100D39D24 /* LaunchScreen.storyboard */,
 				E287AD1B1CEA607100D39D24 /* Info.plist */,
@@ -135,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E287AD341CEA607100D39D24 /* Build configuration list for PBXNativeTarget "Chooonz" */;
 			buildPhases = (
+				7CFD5A5CE98056FD6511494B /* 📦 Check Pods Manifest.lock */,
 				E287AD051CEA607100D39D24 /* Sources */,
 				E287AD061CEA607100D39D24 /* Frameworks */,
 				E287AD071CEA607100D39D24 /* Resources */,
+				805B75D5BF785F0A7DD10FEE /* 📦 Embed Pods Frameworks */,
+				0045FBCD74BB27E8A77985BF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E287AD371CEA607100D39D24 /* Build configuration list for PBXNativeTarget "ChooonzTests" */;
 			buildPhases = (
+				668D396D87F614888DB0F9DE /* 📦 Check Pods Manifest.lock */,
 				E287AD1C1CEA607100D39D24 /* Sources */,
 				E287AD1D1CEA607100D39D24 /* Frameworks */,
 				E287AD1E1CEA607100D39D24 /* Resources */,
+				804D2A6FF63C189ED1CD2D7C /* 📦 Embed Pods Frameworks */,
+				52A4BDFAAA6B02AB14F23ABE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E287AD3A1CEA607100D39D24 /* Build configuration list for PBXNativeTarget "ChooonzUITests" */;
 			buildPhases = (
+				384960A02F1A196EAEAABE23 /* 📦 Check Pods Manifest.lock */,
 				E287AD271CEA607100D39D24 /* Sources */,
 				E287AD281CEA607100D39D24 /* Frameworks */,
 				E287AD291CEA607100D39D24 /* Resources */,
+				B47F7D3DB912BDCB090CB2E7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +308,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0045FBCD74BB27E8A77985BF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chooonz/Pods-Chooonz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		384960A02F1A196EAEAABE23 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52A4BDFAAA6B02AB14F23ABE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChooonzTests/Pods-ChooonzTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		668D396D87F614888DB0F9DE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CFD5A5CE98056FD6511494B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		804D2A6FF63C189ED1CD2D7C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChooonzTests/Pods-ChooonzTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		805B75D5BF785F0A7DD10FEE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chooonz/Pods-Chooonz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B47F7D3DB912BDCB090CB2E7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChooonzUITests/Pods-ChooonzUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E287AD051CEA607100D39D24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E287AD0F1CEA607100D39D24 /* ViewController.swift in Sources */,
+				E287AD401CEB2C5700D39D24 /* SongCell.swift in Sources */,
+				E287AD3E1CEB238300D39D24 /* ChooonzTableViewController.swift in Sources */,
 				E287AD151CEA607100D39D24 /* Chooonz.xcdatamodeld in Sources */,
 				E287AD0D1CEA607100D39D24 /* AppDelegate.swift in Sources */,
 			);
@@ -406,6 +581,7 @@
 		};
 		E287AD351CEA607100D39D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BB1289E02B1862C296EDC7 /* Pods-Chooonz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chooonz/Info.plist;
@@ -417,6 +593,7 @@
 		};
 		E287AD361CEA607100D39D24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3C7B76B40BD422BB43034F /* Pods-Chooonz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chooonz/Info.plist;
@@ -428,6 +605,7 @@
 		};
 		E287AD381CEA607100D39D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DDFDBD9C837DDEE8683A1D1 /* Pods-ChooonzTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChooonzTests/Info.plist;
@@ -440,6 +618,7 @@
 		};
 		E287AD391CEA607100D39D24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 755CB317D253214C54EB6DB0 /* Pods-ChooonzTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChooonzTests/Info.plist;
@@ -452,6 +631,7 @@
 		};
 		E287AD3B1CEA607100D39D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A21D5014215012D57B6D28A /* Pods-ChooonzUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ChooonzUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -463,6 +643,7 @@
 		};
 		E287AD3C1CEA607100D39D24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870F73ABCF42CFEE786C6521 /* Pods-ChooonzUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ChooonzUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -491,6 +672,7 @@
 				E287AD361CEA607100D39D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E287AD371CEA607100D39D24 /* Build configuration list for PBXNativeTarget "ChooonzTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +681,7 @@
 				E287AD391CEA607100D39D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E287AD3A1CEA607100D39D24 /* Build configuration list for PBXNativeTarget "ChooonzUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +690,7 @@
 				E287AD3C1CEA607100D39D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
