@@ -19,47 +19,56 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IuT-Bf-2IR" id="BSN-W9-N7s">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Such Dumb Luck" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-NC-IOr">
-                                            <rect key="frame" x="8" y="241" width="584" height="21"/>
+                                            <rect key="frame" x="74" y="241" width="518" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="WZ3-QD-gJK"/>
+                                                <constraint firstAttribute="height" constant="21" id="enA-ph-80i"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-Hr-p3Y">
-                                            <rect key="frame" x="8" y="270" width="584" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-Fg-6SL">
+                                            <rect key="frame" x="8" y="8" width="584" height="225"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_pale" translatesAutoresizingMaskIntoConstraints="NO" id="7MV-MI-RvZ">
+                                            <rect key="frame" x="8" y="241" width="50" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="K4r-fu-Y9K"/>
+                                                <constraint firstAttribute="width" constant="50" id="8sK-hk-xEo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-Hr-p3Y">
+                                            <rect key="frame" x="74" y="270" width="518" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gJP-Oa-DMM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_pale" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-Fg-6SL">
-                                            <rect key="frame" x="8" y="8" width="584" height="225"/>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="CZg-NC-IOr" secondAttribute="trailing" id="0kq-o4-fW1"/>
-                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="BSN-W9-N7s" secondAttribute="trailingMargin" id="5DW-aK-J2C"/>
-                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="BSN-W9-N7s" secondAttribute="leadingMargin" id="CJo-jp-Vrz"/>
-                                        <constraint firstItem="lNc-Hr-p3Y" firstAttribute="top" secondItem="CZg-NC-IOr" secondAttribute="bottom" constant="8" symbolic="YES" id="E5X-WY-qws"/>
-                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="top" secondItem="BSN-W9-N7s" secondAttribute="topMargin" id="G0U-ua-NDt"/>
-                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="CZg-NC-IOr" secondAttribute="leading" id="T9o-Ys-gqt"/>
-                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="top" secondItem="7P2-Fg-6SL" secondAttribute="bottom" constant="8" symbolic="YES" id="ceJ-LY-hVd"/>
-                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="trailing" secondItem="lNc-Hr-p3Y" secondAttribute="trailing" id="haT-iF-kYq"/>
-                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="leading" secondItem="lNc-Hr-p3Y" secondAttribute="leading" id="ygC-2L-LeO"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="lNc-Hr-p3Y" secondAttribute="bottom" constant="0.5" id="zCc-HY-CWF"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="leading" secondItem="lNc-Hr-p3Y" secondAttribute="leading" id="0Ew-1i-cB9"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="7MV-MI-RvZ" secondAttribute="leading" id="Dw6-Mv-T4i"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="trailing" secondItem="lNc-Hr-p3Y" secondAttribute="trailing" id="Gtn-H2-wB6"/>
+                                        <constraint firstItem="7MV-MI-RvZ" firstAttribute="bottom" secondItem="lNc-Hr-p3Y" secondAttribute="bottom" id="Jb6-bb-PDB"/>
+                                        <constraint firstItem="7MV-MI-RvZ" firstAttribute="top" secondItem="7P2-Fg-6SL" secondAttribute="bottom" constant="8" symbolic="YES" id="OMH-9F-AfU"/>
+                                        <constraint firstItem="lNc-Hr-p3Y" firstAttribute="top" secondItem="CZg-NC-IOr" secondAttribute="bottom" constant="8" symbolic="YES" id="PtS-Nz-rDx"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="leading" secondItem="BSN-W9-N7s" secondAttribute="leadingMargin" id="VRp-xJ-Dmz"/>
+                                        <constraint firstItem="7MV-MI-RvZ" firstAttribute="top" secondItem="CZg-NC-IOr" secondAttribute="top" id="Yi6-g6-sb1"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="top" secondItem="BSN-W9-N7s" secondAttribute="topMargin" id="fJD-nq-OZb"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="CZg-NC-IOr" secondAttribute="trailing" id="kVt-yS-eIQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7MV-MI-RvZ" secondAttribute="bottom" constant="0.5" id="kyc-3q-vBt"/>
+                                        <constraint firstItem="7P2-Fg-6SL" firstAttribute="trailing" secondItem="BSN-W9-N7s" secondAttribute="trailingMargin" id="maj-Ax-5gn"/>
+                                        <constraint firstItem="CZg-NC-IOr" firstAttribute="leading" secondItem="7MV-MI-RvZ" secondAttribute="trailing" constant="16" id="tmL-nC-Op6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="songArtist" destination="lNc-Hr-p3Y" id="if6-a8-yML"/>
+                                    <outlet property="songArtistImage" destination="7MV-MI-RvZ" id="nPl-nd-air"/>
                                     <outlet property="songImage" destination="7P2-Fg-6SL" id="KMU-ag-WlZ"/>
                                     <outlet property="songTitle" destination="CZg-NC-IOr" id="4Va-NZ-k97"/>
                                 </connections>
@@ -101,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LaunchImage" width="60" height="60"/>
         <image name="the_pale" width="960" height="960"/>
     </resources>
 </document>

@@ -13,6 +13,7 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var songArtist: UILabel!
+    @IBOutlet weak var songArtistImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -13,7 +13,7 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     var songTitles = ["Such Dumb Luck", "Shake Shake", "I Was Born", "Nothing Lasts Forever", "Tempting Me"]
     var songArtists = ["The Pale", "REWS", "Otherkin", "MKAI", "In The Willows"]
     var songArtistsBio = ["The Pale started life in Dublin's Northside in the early 90's but drew their influences from far beyond. For some they are best remembered for their hits 'Butterfly' and 'Dogs with no tails'. But that is only the tip of the iceberg for a band that has steered clear of the beaten track.", "REWS is the Irish/ London based high energy female duo consisting of songstress Shauna Tohill and beat-maker Collette Williams who together are creating a genuine buzz with their brand of ultra catchy high energy alt rock.", "Dublin grunge-pop outfit Otherkin keep the raucous rock vibes going in a world of soulless synth pop.", "All adept players from an early age, MKAI incorporate wandering guitar figure, piano and electronics into songs replete with a strong sense of melody and urgency.", "Formed in 2011 as an acoustic trio, Waterford band In The Willows gained speedy recognition. The band has now evolved to a sextet, still mixing it up across the genres! In The Willows’ debut album saw the group mixing the lines between folk, alternative, pop and rock to create their own heartwarming and aurally fulfilling sound."]
-    var songImages = ["the_pale", "news", "otherkin", "mkai", "in_the_willows"]
+    var songImages = ["the_pale", "rews", "otherkin", "mkai", "in_the_willows"]
     
     var filteredSongs = [String]()
     var searchController: UISearchController!
@@ -58,11 +58,21 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         if self.searchController.active {
             cell.songTitle?.text = self.filteredSongs[indexPath.row]
             cell.songArtist?.text = self.filteredSongs[indexPath.row]
-            cell.songImage?.image = UIImage(named: self.songImages[indexPath.row])
+            
+            
+            cell.songArtistImage?.image = UIImage(named: self.songImages[indexPath.row])
+            // Give image rounded corners
+            cell.songArtistImage.layer.cornerRadius = cell.songArtistImage.frame.size.width / 2
+            cell.songArtistImage.clipsToBounds = true
+            
         } else {
             cell.songTitle?.text = self.songTitles[indexPath.row]
             cell.songArtist?.text = self.songArtists[indexPath.row]
-            cell.songImage?.image = UIImage(named: self.songImages[indexPath.row])
+            
+            cell.songArtistImage?.image = UIImage(named: self.songImages[indexPath.row])
+            // Give image rounded corners
+            cell.songArtistImage.layer.cornerRadius = cell.songArtistImage.frame.size.width / 2
+            cell.songArtistImage.clipsToBounds = true
         }
 
         return cell
