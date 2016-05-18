@@ -11,9 +11,9 @@ import UIKit
 class ChooonzCell: UITableViewCell {
     
     @IBOutlet weak var youtubeThumbnail: UIImageView!
-    @IBOutlet weak var songTitle: UILabel!
-    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var youtubeTitle: UILabel!
     @IBOutlet weak var artistImage: UIImageView!
+    @IBOutlet weak var artistName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

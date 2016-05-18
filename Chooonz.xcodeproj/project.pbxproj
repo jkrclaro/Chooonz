@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		84BABFA6C9B6871E0A3CD7C0 /* Pods_ChooonzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286314B0A7400645F61D707E /* Pods_ChooonzTests.framework */; };
 		AF9E320CBEB94624FD837DA0 /* Pods_Chooonz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9F9F9B12A9E0B9D56B44A7 /* Pods_Chooonz.framework */; };
+		E25888CF1CEC4A2F002F7434 /* ChooonzVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25888CE1CEC4A2F002F7434 /* ChooonzVideoViewController.swift */; };
+		E25888D11CEC4CFF002F7434 /* Chooonz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25888D01CEC4CFF002F7434 /* Chooonz.swift */; };
+		E25888D51CEC4FD4002F7434 /* ChooonzModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25888D41CEC4FD4002F7434 /* ChooonzModel.swift */; };
 		E287AD0D1CEA607100D39D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD0C1CEA607100D39D24 /* AppDelegate.swift */; };
 		E287AD121CEA607100D39D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287AD101CEA607100D39D24 /* Main.storyboard */; };
 		E287AD151CEA607100D39D24 /* Chooonz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E287AD131CEA607100D39D24 /* Chooonz.xcdatamodeld */; };
@@ -17,7 +20,7 @@
 		E287AD251CEA607100D39D24 /* ChooonzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD241CEA607100D39D24 /* ChooonzTests.swift */; };
 		E287AD301CEA607100D39D24 /* ChooonzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD2F1CEA607100D39D24 /* ChooonzUITests.swift */; };
 		E287AD3E1CEB238300D39D24 /* ChooonzTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */; };
-		E287AD401CEB2C5700D39D24 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3F1CEB2C5700D39D24 /* SongCell.swift */; };
+		E287AD401CEB2C5700D39D24 /* ChooonzCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3F1CEB2C5700D39D24 /* ChooonzCell.swift */; };
 		F9A21083EB5AAC6E7B35B17D /* Pods_ChooonzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		870F73ABCF42CFEE786C6521 /* Pods-ChooonzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChooonzUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChooonzUITests/Pods-ChooonzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		90BB1289E02B1862C296EDC7 /* Pods-Chooonz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chooonz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chooonz/Pods-Chooonz.debug.xcconfig"; sourceTree = "<group>"; };
 		AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChooonzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25888CE1CEC4A2F002F7434 /* ChooonzVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooonzVideoViewController.swift; sourceTree = "<group>"; };
+		E25888D01CEC4CFF002F7434 /* Chooonz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chooonz.swift; sourceTree = "<group>"; };
+		E25888D41CEC4FD4002F7434 /* ChooonzModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooonzModel.swift; path = ../ChooonzModel.swift; sourceTree = "<group>"; };
 		E287AD091CEA607100D39D24 /* Chooonz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chooonz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287AD0C1CEA607100D39D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287AD111CEA607100D39D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +68,7 @@
 		E287AD2F1CEA607100D39D24 /* ChooonzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooonzUITests.swift; sourceTree = "<group>"; };
 		E287AD311CEA607100D39D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooonzTableViewController.swift; sourceTree = "<group>"; };
-		E287AD3F1CEB2C5700D39D24 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		E287AD3F1CEB2C5700D39D24 /* ChooonzCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooonzCell.swift; sourceTree = "<group>"; };
 		E2B2B7611CEBF0CF00F6C45D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../Downloads/roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		E2B2B7621CEBF0CF00F6C45D /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "../../Downloads/roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		E2B2B7631CEBF0CF00F6C45D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../Downloads/roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -162,8 +168,11 @@
 			children = (
 				E287AD0C1CEA607100D39D24 /* AppDelegate.swift */,
 				E287AD101CEA607100D39D24 /* Main.storyboard */,
-				E287AD3F1CEB2C5700D39D24 /* SongCell.swift */,
+				E25888D01CEC4CFF002F7434 /* Chooonz.swift */,
+				E25888D41CEC4FD4002F7434 /* ChooonzModel.swift */,
+				E287AD3F1CEB2C5700D39D24 /* ChooonzCell.swift */,
 				E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */,
+				E25888CE1CEC4A2F002F7434 /* ChooonzVideoViewController.swift */,
 				E287AD161CEA607100D39D24 /* Assets.xcassets */,
 				E287AD181CEA607100D39D24 /* LaunchScreen.storyboard */,
 				E287AD1B1CEA607100D39D24 /* Info.plist */,
@@ -480,9 +489,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E287AD401CEB2C5700D39D24 /* SongCell.swift in Sources */,
+				E25888CF1CEC4A2F002F7434 /* ChooonzVideoViewController.swift in Sources */,
+				E287AD401CEB2C5700D39D24 /* ChooonzCell.swift in Sources */,
 				E287AD3E1CEB238300D39D24 /* ChooonzTableViewController.swift in Sources */,
+				E25888D51CEC4FD4002F7434 /* ChooonzModel.swift in Sources */,
 				E287AD151CEA607100D39D24 /* Chooonz.xcdatamodeld in Sources */,
+				E25888D11CEC4CFF002F7434 /* Chooonz.swift in Sources */,
 				E287AD0D1CEA607100D39D24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

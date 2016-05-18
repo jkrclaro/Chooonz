@@ -13,15 +13,14 @@ import AlamofireImage
 class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating {
     
     var chooonzs: [Chooonz] = [Chooonz]()
-    var filteredChooonz = [Chooonz]()
+    var filteredChooonzs = [Chooonz]()
     var searchController: UISearchController!
-//    var selectedChooonz = Chooonz(songTitle: "", youtubeThumbnail: UIImage(named: "PhotoNotAvailable")!, youtubeID: "", artistName: "", artistImage: UIImage(named: "PhotoNotAvailable")!, artistDescription: "")
+    var selectedChooonz = Chooonz(youtubeTitle: "", youtubeThumbnail: UIImage(named: "photoNotAvailable")!, youtubeID: "", artistName: "", artistImage: UIImage(named: "photoNotAvailable")!, artistDescription: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.chooonzs = ChooonzModel().getChooonzs()
-        print(self.chooonzs)
         self.searchController = UISearchController(searchResultsController: nil) // Instantiates the search controller
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false // Disables dimming of background when search bar is pressed
@@ -33,8 +32,8 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
         // Filter through the songs
-        self.filteredChooonz = self.chooonzs.filter { (chooonz: Chooonz) -> Bool in
-            if chooonz.songTitle.lowercaseString.containsString(self.searchController.searchBar.text!.lowercaseString) {
+        self.filteredChooonzs = self.chooonzs.filter { (chooonz: Chooonz) -> Bool in
+            if chooonz.youtubeTitle.lowercaseString.containsString(self.searchController.searchBar.text!.lowercaseString) {
                 return true
             } else {
                 return false
@@ -47,7 +46,7 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.searchController.active {
-            return self.filteredChooonz.count
+            return self.filteredChooonzs.count
         } else {
             return self.chooonzs.count
         }
@@ -57,10 +56,10 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         let cell = tableView.dequeueReusableCellWithIdentifier("ChooonzCell", forIndexPath: indexPath) as! ChooonzCell
         
         if self.searchController.active {
-            cell.songTitle?.text = self.filteredChooonz[indexPath.row].songTitle
-            cell.artistName?.text = self.filteredChooonz[indexPath.row].artistName
+            cell.youtubeTitle?.text = self.filteredChooonzs[indexPath.row].youtubeTitle
+            cell.artistName?.text = self.filteredChooonzs[indexPath.row].artistName
             
-            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.filteredChooonz[indexPath.row].youtubeID + "/maxresdefault.jpg"
+            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.filteredChooonzs[indexPath.row].youtubeID + "/maxresdefault.jpg"
             Alamofire.request(.GET, youtubeThumbnailURL)
                 .responseImage { response in
                     if let image = response.result.value {
@@ -68,13 +67,13 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
                     }
             }
         
-            cell.artistImage?.image = self.filteredChooonz[indexPath.row].artistImage
+            cell.artistImage?.image = self.filteredChooonzs[indexPath.row].artistImage
             // Give image rounded corners
             cell.artistImage.layer.cornerRadius = cell.artistImage.frame.size.width / 2
             cell.artistImage.clipsToBounds = true
             
         } else {
-            cell.songTitle?.text = self.chooonzs[indexPath.row].songTitle
+            cell.youtubeTitle?.text = self.chooonzs[indexPath.row].youtubeTitle
             cell.artistName?.text = self.chooonzs[indexPath.row].artistName
             
             let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.chooonzs[indexPath.row].youtubeID + "/maxresdefault.jpg"
@@ -94,8 +93,18 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        // Retrieves the song the user selected
-//        print("Hi")
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get a reference to the destination view controller
+        if segue.identifier == "goToVideo" {
+            let videoViewController = segue.destinationViewController as! ChooonzVideoViewController
+            let path = tableView.indexPathForSelectedRow
+            if self.searchController.active{
+                self.selectedChooonz = self.filteredChooonzs[path!.row]
+            } else {
+                self.selectedChooonz = self.chooonzs[path!.row]
+            }
+            // Set the selected video property of the destination view controller
+            videoViewController.selectedChooonz = self.selectedChooonz
+        }
+    }
 }

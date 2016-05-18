@@ -10,15 +10,15 @@ import UIKit
 
 class Chooonz: NSObject {
     
-    var songTitle: String
+    var youtubeTitle: String
     var youtubeThumbnail: UIImage
     var youtubeID: String
     var artistName: String
     var artistImage: UIImage
     var artistDescription: String
     
-    init(songTitle: String, youtubeThumbnail: UIImage, youtubeID: String, artistName: String, artistImage: UIImage, artistDescription: String) {
-        self.songTitle = songTitle
+    init(youtubeTitle: String, youtubeThumbnail: UIImage, youtubeID: String, artistName: String, artistImage: UIImage, artistDescription: String) {
+        self.youtubeTitle = youtubeTitle
         self.youtubeThumbnail = youtubeThumbnail
         self.youtubeID = youtubeID
         self.artistName = artistName

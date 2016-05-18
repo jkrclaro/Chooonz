@@ -16,7 +16,7 @@ a web server created in Swift.
 - [ ] Better string filter by taking in to account the position of letters
 - [ ] Display user's recent searches
 
-# Cocoa Pods
+# Cocoa Pods (version 1.0.0)
 Ensure you have cocoa pods installed. Refer to this guide https://www.youtube.com/watch?v=oNKVVBN2JN0.
 
 Using a text editor, the developer can edit the <b>Podfile</b> file in

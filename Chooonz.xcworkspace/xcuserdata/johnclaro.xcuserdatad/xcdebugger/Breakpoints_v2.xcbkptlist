@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chooonz/ChooonzCell.swift"
+            timestampString = "485231662.386553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ChooonzCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chooonz.ChooonzCell.songImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Chooonz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnclaro/Desktop/Chooonz/Chooonz/ChooonzCell.swift"
+                  timestampString = "485231662.391164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chooonz.ChooonzCell.songImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Chooonz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnclaro/Desktop/Chooonz/Chooonz/ChooonzCell.swift"
+                  timestampString = "485231662.391348"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chooonz.ChooonzCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Chooonz.ChooonzCell"
+                  moduleName = "Chooonz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnclaro/Desktop/Chooonz/Chooonz/ChooonzCell.swift"
+                  timestampString = "485231662.391447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chooonz.ChooonzCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Chooonz.ChooonzCell&gt;"
+                  moduleName = "Chooonz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnclaro/Desktop/Chooonz/Chooonz/ChooonzCell.swift"
+                  timestampString = "485231662.391534"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
