@@ -9,8 +9,8 @@ a web server created in Swift.
 - [x] Allow user to search for song titles
 - [x] Display items in a table view
 - [x] Create circular logo for artist image
-- [ ] Send API requests using Alamofire
-- [ ] Display YouTube thumbnail
+- [x] Send API requests using Alamofire
+- [x] Display YouTube thumbnail
 - [ ] Play YouTube video
 - [x] Use Roboto font
 - [ ] Better string filter by taking in to account the position of letters

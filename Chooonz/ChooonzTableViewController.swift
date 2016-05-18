@@ -72,19 +72,13 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
             cell.songTitle?.text = self.songTitles[indexPath.row]
             cell.songArtist?.text = self.songArtists[indexPath.row]
             
-            let songThumbnailURL = "http://i1.ytimg.com/vi/" + self.songYouTubeIDs[indexPath.row] + "/mqdefault.jpg"
+            let songThumbnailURL = "https://i1.ytimg.com/vi/" + self.songYouTubeIDs[indexPath.row] + "/maxresdefault.jpg"
             Alamofire.request(.GET, songThumbnailURL)
                 .responseImage { response in
-                    debugPrint(response)
-                    print(response.request)
-                    print(response.response)
-                    debug(response.result)
-                    
                     if let image = response.result.value {
                         cell.songImage?.image = image
                     }
             }
-            
             
             cell.songArtistImage?.image = UIImage(named: self.songImages[indexPath.row])
             // Give image rounded corners
