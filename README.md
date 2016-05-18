@@ -11,7 +11,7 @@ a web server created in Swift.
 - [x] Create circular logo for artist image
 - [x] Send API requests using Alamofire
 - [x] Display YouTube thumbnail
-- [ ] Play YouTube video
+- [x] Play YouTube video
 - [x] Use Roboto font
 - [ ] Better string filter by taking in to account the position of letters
 - [ ] Display user's recent searches
