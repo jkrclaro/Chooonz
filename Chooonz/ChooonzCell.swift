@@ -1,5 +1,5 @@
 //
-//  SongCell.swift
+//  ChooonzCell.swift
 //  Chooonz
 //
 //  Created by John Claro on 17/05/2016.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SongCell: UITableViewCell {
+class ChooonzCell: UITableViewCell {
     
-    @IBOutlet weak var songImage: UIImageView!
+    @IBOutlet weak var youtubeThumbnail: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
-    @IBOutlet weak var songArtist: UILabel!
-    @IBOutlet weak var songArtistImage: UIImageView!
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var artistImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

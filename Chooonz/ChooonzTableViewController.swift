@@ -11,20 +11,17 @@ import Alamofire
 import AlamofireImage
 
 class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating {
-    let YOUTUBE_API_KEY = "AIzaSyASQmuEQjisq2etMyH20mfd84OQJIU_2KE"
     
-    var songTitles = ["Such Dumb Luck", "Shake Shake", "I Was Born", "Nothing Lasts Forever", "Tempting Me"]
-    var songArtists = ["The Pale", "REWS", "Otherkin", "MKAI", "In The Willows"]
-    var songArtistsBio = ["The Pale started life in Dublin's Northside in the early 90's but drew their influences from far beyond. For some they are best remembered for their hits 'Butterfly' and 'Dogs with no tails'. But that is only the tip of the iceberg for a band that has steered clear of the beaten track.", "REWS is the Irish/ London based high energy female duo consisting of songstress Shauna Tohill and beat-maker Collette Williams who together are creating a genuine buzz with their brand of ultra catchy high energy alt rock.", "Dublin grunge-pop outfit Otherkin keep the raucous rock vibes going in a world of soulless synth pop.", "All adept players from an early age, MKAI incorporate wandering guitar figure, piano and electronics into songs replete with a strong sense of melody and urgency.", "Formed in 2011 as an acoustic trio, Waterford band In The Willows gained speedy recognition. The band has now evolved to a sextet, still mixing it up across the genres! In The Willows’ debut album saw the group mixing the lines between folk, alternative, pop and rock to create their own heartwarming and aurally fulfilling sound."]
-    var songImages = ["the_pale", "rews", "otherkin", "mkai", "in_the_willows"]
-    var songYouTubeIDs = ["lGsawtEQJos", "QTAx0uUpJz0", "bTkUBgQummw", "5E5Pquvx5hA", "aI7XUBExCyI"]
-    
-    var filteredSongs = [String]()
+    var chooonzs: [Chooonz] = [Chooonz]()
+    var filteredChooonz = [Chooonz]()
     var searchController: UISearchController!
+//    var selectedChooonz = Chooonz(songTitle: "", youtubeThumbnail: UIImage(named: "PhotoNotAvailable")!, youtubeID: "", artistName: "", artistImage: UIImage(named: "PhotoNotAvailable")!, artistDescription: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.chooonzs = ChooonzModel().getChooonzs()
+        print(self.chooonzs)
         self.searchController = UISearchController(searchResultsController: nil) // Instantiates the search controller
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false // Disables dimming of background when search bar is pressed
@@ -36,8 +33,8 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
         // Filter through the songs
-        self.filteredSongs = self.songTitles.filter { (songTitle: String) -> Bool in
-            if songTitle.lowercaseString.containsString(self.searchController.searchBar.text!.lowercaseString) {
+        self.filteredChooonz = self.chooonzs.filter { (chooonz: Chooonz) -> Bool in
+            if chooonz.songTitle.lowercaseString.containsString(self.searchController.searchBar.text!.lowercaseString) {
                 return true
             } else {
                 return false
@@ -50,42 +47,55 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.searchController.active {
-            return self.filteredSongs.count
+            return self.filteredChooonz.count
         } else {
-            return self.songTitles.count
+            return self.chooonzs.count
         }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SongCell", forIndexPath: indexPath) as! SongCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ChooonzCell", forIndexPath: indexPath) as! ChooonzCell
         
         if self.searchController.active {
-            cell.songTitle?.text = self.filteredSongs[indexPath.row]
-            cell.songArtist?.text = self.filteredSongs[indexPath.row]
-        
-            cell.songArtistImage?.image = UIImage(named: self.songImages[indexPath.row])
-            // Give image rounded corners
-            cell.songArtistImage.layer.cornerRadius = cell.songArtistImage.frame.size.width / 2
-            cell.songArtistImage.clipsToBounds = true
+            cell.songTitle?.text = self.filteredChooonz[indexPath.row].songTitle
+            cell.artistName?.text = self.filteredChooonz[indexPath.row].artistName
             
-        } else {
-            cell.songTitle?.text = self.songTitles[indexPath.row]
-            cell.songArtist?.text = self.songArtists[indexPath.row]
-            
-            let songThumbnailURL = "https://i1.ytimg.com/vi/" + self.songYouTubeIDs[indexPath.row] + "/maxresdefault.jpg"
-            Alamofire.request(.GET, songThumbnailURL)
+            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.filteredChooonz[indexPath.row].youtubeID + "/maxresdefault.jpg"
+            Alamofire.request(.GET, youtubeThumbnailURL)
                 .responseImage { response in
                     if let image = response.result.value {
-                        cell.songImage?.image = image
+                        cell.youtubeThumbnail?.image = image
+                    }
+            }
+        
+            cell.artistImage?.image = self.filteredChooonz[indexPath.row].artistImage
+            // Give image rounded corners
+            cell.artistImage.layer.cornerRadius = cell.artistImage.frame.size.width / 2
+            cell.artistImage.clipsToBounds = true
+            
+        } else {
+            cell.songTitle?.text = self.chooonzs[indexPath.row].songTitle
+            cell.artistName?.text = self.chooonzs[indexPath.row].artistName
+            
+            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.chooonzs[indexPath.row].youtubeID + "/maxresdefault.jpg"
+            Alamofire.request(.GET, youtubeThumbnailURL)
+                .responseImage { response in
+                    if let image = response.result.value {
+                        cell.youtubeThumbnail?.image = image
                     }
             }
             
-            cell.songArtistImage?.image = UIImage(named: self.songImages[indexPath.row])
+            cell.artistImage?.image = self.chooonzs[indexPath.row].artistImage
             // Give image rounded corners
-            cell.songArtistImage.layer.cornerRadius = cell.songArtistImage.frame.size.width / 2
-            cell.songArtistImage.clipsToBounds = true
+            cell.artistImage.layer.cornerRadius = cell.artistImage.frame.size.width / 2
+            cell.artistImage.clipsToBounds = true
         }
 
         return cell
     }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        // Retrieves the song the user selected
+//        print("Hi")
+//    }
 }

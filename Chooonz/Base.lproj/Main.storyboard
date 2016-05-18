@@ -9,6 +9,11 @@
         <mutableArray key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
             <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -21,11 +26,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="300" id="IuT-Bf-2IR" customClass="SongCell" customModule="Chooonz" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChooonzCell" rowHeight="300" id="IuT-Bf-2IR" customClass="ChooonzCell" customModule="Chooonz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IuT-Bf-2IR" id="BSN-W9-N7s">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Such Dumb Luck" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-NC-IOr">
@@ -73,10 +78,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="songArtist" destination="lNc-Hr-p3Y" id="if6-a8-yML"/>
-                                    <outlet property="songArtistImage" destination="7MV-MI-RvZ" id="nPl-nd-air"/>
-                                    <outlet property="songImage" destination="7P2-Fg-6SL" id="KMU-ag-WlZ"/>
-                                    <outlet property="songTitle" destination="CZg-NC-IOr" id="4Va-NZ-k97"/>
+                                    <outlet property="artistImage" destination="7MV-MI-RvZ" id="bSG-Ro-YI3"/>
+                                    <outlet property="artistName" destination="lNc-Hr-p3Y" id="hjq-Ph-LdH"/>
+                                    <outlet property="songTitle" destination="CZg-NC-IOr" id="Wgz-Z4-qz6"/>
+                                    <outlet property="youtubeThumbnail" destination="7P2-Fg-6SL" id="O8X-1M-RQx"/>
                                     <segue destination="kXl-Td-dqR" kind="show" id="f8R-c0-JZK"/>
                                 </connections>
                             </tableViewCell>
@@ -92,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1319" y="447"/>
         </scene>
-        <!--View Controller-->
+        <!--Chooonz Video View Controller-->
         <scene sceneID="Pyp-un-IJq">
             <objects>
-                <viewController id="kXl-Td-dqR" sceneMemberID="viewController">
+                <viewController id="kXl-Td-dqR" customClass="ChooonzVideoViewController" customModule="Chooonz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ymx-KW-XaI"/>
                         <viewControllerLayoutGuide type="bottom" id="63X-V1-76C"/>
@@ -103,8 +108,58 @@
                     <view key="view" contentMode="scaleToFill" id="neS-sp-GgC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-tN-JrG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-gW-DBs">
+                                <rect key="frame" x="20" y="215" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gyU-R4-BRx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-ls-b2K">
+                                <rect key="frame" x="20" y="244" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mBe-pT-MOm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPg-Nr-xlJ">
+                                <rect key="frame" x="20" y="273" width="134" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="y35-4n-p9m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zfr-tN-JrG" secondAttribute="trailing" id="42a-b2-zJS"/>
+                            <constraint firstItem="cFw-ls-b2K" firstAttribute="leading" secondItem="rPg-Nr-xlJ" secondAttribute="leading" id="5ks-9v-v6B"/>
+                            <constraint firstItem="cFw-ls-b2K" firstAttribute="top" secondItem="0kU-gW-DBs" secondAttribute="bottom" constant="8" symbolic="YES" id="69I-wL-FiP"/>
+                            <constraint firstItem="rPg-Nr-xlJ" firstAttribute="top" secondItem="cFw-ls-b2K" secondAttribute="bottom" constant="8" symbolic="YES" id="86Z-Xj-2U4"/>
+                            <constraint firstItem="Zfr-tN-JrG" firstAttribute="top" secondItem="Ymx-KW-XaI" secondAttribute="bottom" id="9CO-Xk-nFM"/>
+                            <constraint firstItem="0kU-gW-DBs" firstAttribute="top" secondItem="Zfr-tN-JrG" secondAttribute="bottom" constant="23" id="DFD-tO-9cC"/>
+                            <constraint firstItem="0kU-gW-DBs" firstAttribute="leading" secondItem="cFw-ls-b2K" secondAttribute="leading" id="Iaf-en-K7j"/>
+                            <constraint firstItem="63X-V1-76C" firstAttribute="top" secondItem="rPg-Nr-xlJ" secondAttribute="bottom" constant="306" id="J8G-x1-FeP"/>
+                            <constraint firstItem="Zfr-tN-JrG" firstAttribute="leading" secondItem="neS-sp-GgC" secondAttribute="leading" id="Yzj-nt-HuB"/>
+                            <constraint firstItem="0kU-gW-DBs" firstAttribute="leading" secondItem="neS-sp-GgC" secondAttribute="leadingMargin" id="smX-3f-Abl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistDescription" destination="rPg-Nr-xlJ" id="Rhr-qd-G8l"/>
+                        <outlet property="artistName" destination="cFw-ls-b2K" id="33y-lN-IGO"/>
+                        <outlet property="songTitle" destination="0kU-gW-DBs" id="qBR-fk-A6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTK-Pa-gT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
