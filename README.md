@@ -79,6 +79,8 @@ contains many Roboto type fonts such as Roboto-Bold, Roboto-Regular, etc. If
 you go to the Chooonz > Build Phases > Copy Bundle Resources and add the custom
 fonts that the application will be using.
 
+![alt text][howToInstallAFont1]
+
 # Embedding YouTube Videos
 ## Problem - Using UIWeb Views
 You can use UIWebViews and grab the embed code from YouTube to embed a YouTube
@@ -103,7 +105,12 @@ class ChooonzVideoViewController: UIViewController {
 The great thing about this pod is that you can use a UIView and simply change
 its class to YTPlayerView in the Identity Inspector tab. This will
 automatically configure its layout without having to hardcore the height and
-width.
+width. I've currently disabled the ability to full screen the YouTube video
+player as it breaks constraints and produces layout issues. This is shown in the code below.
+```
+// class ChooonzVideoViewController: UIViewController
+self.youtubeVideo.loadWithVideoId(self.selectedChooonz.youtubeID, playerVars: ["playsinline": 1, "fs": 0])
+```
 
 [chooonzLogo]: https://github.com/jkrclaro/Chooonz/blob/master/Images/chooonzLogo.png
 [howToInstallAFont1]: https://github.com/jkrclaro/Chooonz/blob/master/Images/howToInstallAFont1.jpg
