@@ -7,6 +7,7 @@ target 'Chooonz' do
 pod 'Alamofire', '~> 3.4'
 pod 'AlamofireImage', '~> 2.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod "youtube-ios-player-helper", "~> 0.1.4"
 end
 
 target 'ChooonzTests' do
