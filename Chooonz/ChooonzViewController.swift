@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating, ChooonzModelDelegate {
+class ChooonzViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, ChooonzModelDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var chooonzs: [Chooonz] = [Chooonz]()
     var filteredChooonzs = [Chooonz]()
     var searchController: UISearchController!
@@ -22,7 +23,8 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         super.viewDidLoad()
         
         self.chooonzModel.delegate = self
-        self.chooonzModel.getChooonzs()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.searchController = UISearchController(searchResultsController: nil) // Instantiates the search controller
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false // Disables dimming of background when search bar is pressed
@@ -32,7 +34,8 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
     }
     
     func dataReady() {
-        self.chooonzs = self.chooonzModel.chooonzArray
+        self.chooonzs = self.chooonzModel.chooonzs
+        print(self.chooonzs)
         self.tableView.reloadData()
     }
     
@@ -48,12 +51,10 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         }
         
         // Update the results table view
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.searchController.active {
             return self.filteredChooonzs.count
         } else {
@@ -61,13 +62,21 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         }
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ChooonzCell", forIndexPath: indexPath) as! ChooonzCell
         
         if self.searchController.active {
             cell.youtubeTitle?.text = self.filteredChooonzs[indexPath.row].youtubeTitle
             cell.artistName?.text = self.filteredChooonzs[indexPath.row].artistName
-            cell.youtubeThumbnail?.image = self.filteredChooonzs[indexPath.row].youtubeThumbnail
+            
+            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.filteredChooonzs[indexPath.row].youtubeID + "/maxresdefault.jpg"
+            Alamofire.request(.GET, youtubeThumbnailURL)
+                .responseImage { response in
+                    if let image = response.result.value {
+                        cell.youtubeThumbnail?.image = image
+                    }
+            }
+        
             cell.artistImage?.image = self.filteredChooonzs[indexPath.row].artistImage
             // Give image rounded corners
             cell.artistImage.layer.cornerRadius = cell.artistImage.frame.size.width / 2
@@ -76,7 +85,15 @@ class ChooonzTableViewController: UITableViewController, UISearchResultsUpdating
         } else {
             cell.youtubeTitle?.text = self.chooonzs[indexPath.row].youtubeTitle
             cell.artistName?.text = self.chooonzs[indexPath.row].artistName
-            cell.youtubeThumbnail?.image = self.chooonzs[indexPath.row].youtubeThumbnail
+            
+            let youtubeThumbnailURL = "https://i1.ytimg.com/vi/" + self.chooonzs[indexPath.row].youtubeID + "/maxresdefault.jpg"
+            Alamofire.request(.GET, youtubeThumbnailURL)
+                .responseImage { response in
+                    if let image = response.result.value {
+                        cell.youtubeThumbnail?.image = image
+                    }
+            }
+            
             cell.artistImage?.image = self.chooonzs[indexPath.row].artistImage
             // Give image rounded corners
             cell.artistImage.layer.cornerRadius = cell.artistImage.frame.size.width / 2

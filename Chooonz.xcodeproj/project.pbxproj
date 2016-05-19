@@ -21,6 +21,9 @@
 		E287AD301CEA607100D39D24 /* ChooonzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD2F1CEA607100D39D24 /* ChooonzUITests.swift */; };
 		E287AD3E1CEB238300D39D24 /* ChooonzTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3D1CEB238300D39D24 /* ChooonzTableViewController.swift */; };
 		E287AD401CEB2C5700D39D24 /* ChooonzCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287AD3F1CEB2C5700D39D24 /* ChooonzCell.swift */; };
+		E2F3B7571CEDD465009A5BE7 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2B2B7611CEBF0CF00F6C45D /* Roboto-Black.ttf */; };
+		E2F3B7581CEDD465009A5BE7 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2B2B7631CEBF0CF00F6C45D /* Roboto-Bold.ttf */; };
+		E2F3B7591CEDD465009A5BE7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2B2B76A1CEBF0CF00F6C45D /* Roboto-Regular.ttf */; };
 		F9A21083EB5AAC6E7B35B17D /* Pods_ChooonzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE34BAD382A80A721DE703D8 /* Pods_ChooonzUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F3B7571CEDD465009A5BE7 /* Roboto-Black.ttf in Resources */,
+				E2F3B7581CEDD465009A5BE7 /* Roboto-Bold.ttf in Resources */,
+				E2F3B7591CEDD465009A5BE7 /* Roboto-Regular.ttf in Resources */,
 				E287AD1A1CEA607100D39D24 /* LaunchScreen.storyboard in Resources */,
 				E287AD171CEA607100D39D24 /* Assets.xcassets in Resources */,
 				E287AD121CEA607100D39D24 /* Main.storyboard in Resources */,
