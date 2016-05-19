@@ -20,7 +20,7 @@ class ChooonzModel: NSObject {
     var delegate: ChooonzModelDelegate?
     
     func getChooonzs() {
-        Alamofire.request(.GET, "https://choonz.eu-gb.mybluemix.net/songs").responseJSON { (responseData) -> Void in
+        Alamofire.request(.GET, "http://choonz.eu-gb.mybluemix.net/songs").responseJSON { (responseData) -> Void in
             let data = JSON(responseData.result.value!)
             var arrayOfChooonzs = [Chooonz]()
             for (_, chooonzDetails) in data {
