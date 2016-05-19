@@ -111,6 +111,8 @@ player as it breaks constraints and produces layout issues. This is shown in the
 // class ChooonzVideoViewController: UIViewController
 self.youtubeVideo.loadWithVideoId(self.selectedChooonz.youtubeID, playerVars: ["playsinline": 1, "fs": 0])
 ```
+where "fs": 0 disables the ability to full screen and "playsinline": 1 only
+allows the YouTube video player as in window mode.
 
 [chooonzLogo]: https://github.com/jkrclaro/Chooonz/blob/master/Images/chooonzLogo.png
 [howToInstallAFont1]: https://github.com/jkrclaro/Chooonz/blob/master/Images/howToInstallAFont1.jpg
