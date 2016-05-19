@@ -1,3 +1,4 @@
+![alt text][chooonzLogo]
 # Chooonz
 iOS application for Chooonz using the Swift programming language. This
 application is the interface that allows users to request song details from
@@ -103,3 +104,6 @@ The great thing about this pod is that you can use a UIView and simply change
 its class to YTPlayerView in the Identity Inspector tab. This will
 automatically configure its layout without having to hardcore the height and
 width.
+
+[chooonzLogo]: https://github.com/jkrclaro/Chooonz/blob/master/Images/chooonzLogo.png
+[howToInstallAFont1]: https://github.com/jkrclaro/Chooonz/blob/master/Images/howToInstallAFont1.jpg
