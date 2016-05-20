@@ -38,5 +38,4 @@ class ChooonzVideoViewController: UIViewController {
         self.artistImage.layer.cornerRadius = self.artistImage.frame.size.width / 2
         self.artistImage.clipsToBounds = true
     }
-
 }

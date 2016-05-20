@@ -92,6 +92,8 @@ there were several constraint issues I encountered when I used this method
 since the embed code requires you to hardcode the width and height of the
 YouTube player. To overcome this, I used <b>youtube-ios-player-helper</b>.
 
+NB: An official iOS 9 issue? Read more at http://stackoverflow.com/questions/34865014/ytplayer-ios-helper-ios-9-constraint-issue 
+
 ## Solution - Use youtube-ios-player-helper
 Using the pod youtube-ios-player-helper to embed the YouTube player.
 The youtube-ios-player-helper has a file called YTPlayerView.h and
